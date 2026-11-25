@@ -2,6 +2,15 @@
 
 Десктопное приложение для пакетной конвертации фото и видео. Tauri 2 + React + TypeScript, обработка через локальный `ffmpeg` — файлы никуда не загружаются.
 
+## Скачать
+
+Готовые сборки — в разделе [Releases](https://github.com/safeidv/prism-converter/releases/latest):
+
+- **Windows x64** — установщик `.exe` (NSIS) или `.msi`
+- **Linux x64** — `.AppImage`, `.deb`, `.rpm`
+
+Для работы нужен установленный `ffmpeg` (см. раздел про Windows ниже).
+
 ## Возможности
 
 - Фото: JPG, PNG, WebP, AVIF, GIF, TIFF, BMP (вход также HEIC/HEIF/SVG — зависит от сборки ffmpeg)
