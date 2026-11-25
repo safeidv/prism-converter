@@ -4,7 +4,7 @@ import { listen } from "@tauri-apps/api/event";
 import { open } from "@tauri-apps/plugin-dialog";
 import { stat } from "@tauri-apps/plugin-fs";
 import { basename, dirname, extname, join } from "@tauri-apps/api/path";
-import { openPath } from "@tauri-apps/plugin-opener";
+import { openPath, openUrl } from "@tauri-apps/plugin-opener";
 import { getCurrentWebview } from "@tauri-apps/api/webview";
 import {
   ArrowRight, Check, ChevronDown, CircleAlert, FileImage, FileVideo,
@@ -414,6 +414,15 @@ export default function App() {
               ))}
             </div>
             <small className="hint">Файлы сохраняются с суффиксом <code>_prism</code>, чтобы не перезаписывать оригиналы.</small>
+            {!tools.ffmpeg && (
+              <div className="install-hint">
+                <CircleAlert size={15} />
+                <span>ffmpeg не найден в PATH. На Windows: <code>winget install Gyan.FFmpeg</code></span>
+                <button className="text-btn" onClick={() => openUrl("https://www.gyan.dev/ffmpeg/builds/").catch(() => {})}>
+                  Скачать <ArrowRight size={13} />
+                </button>
+              </div>
+            )}
           </div>
         </div>
       )}
