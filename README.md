@@ -4,6 +4,8 @@
 
 ## Скачать
 
+![Скриншот Prism Converter](docs/screenshot.png)
+
 Готовые сборки — в разделе [Releases](https://github.com/safeidv/prism-converter/releases/latest):
 
 - **Windows x64** — установщик `.exe` (NSIS) или `.msi`
